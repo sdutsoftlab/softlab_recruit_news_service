@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="io.github.sdutsoftlab.mapper.UserMapper">
+
+    <insert id="addNews" parameterType="user">
+        insert into user(uid, name, gender, qq, className, profile, status, createTime)
+        values (#{uid}, #{name}, #{gender}, #{qq}, #{className}, #{profile}, 0, NOW())
+    </insert>
+
+    <select id="query" parameterType="string" resultType="int">
+        select status from user where uid=#{uid}
+    </select>
+
+    <select id="isExist" parameterType="string" resultType="string">
+        select uid from user where uid=#{uid} limit 1
+    </select>
+</mapper>
