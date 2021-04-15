@@ -6,4 +6,8 @@
         select status from menu where menu=#{mname}
     </select>
 
+    <update id="switchMenu">
+        update menu set status=#{status} where menu=#{mname}
+    </update>
+
 </mapper>

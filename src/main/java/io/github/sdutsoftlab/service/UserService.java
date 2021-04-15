@@ -1,6 +1,7 @@
 package io.github.sdutsoftlab.service;
 
 import io.github.sdutsoftlab.model.User;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author: Devhui

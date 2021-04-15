@@ -20,4 +20,7 @@ public class SoftlabConfig {
     @Value("${sdut.softlab.qqGroup.ID}")
     private String qqGroupID;
 
+    @Value("${sdut.softlab.secretKey}")
+    private String secretKey;
+
 }

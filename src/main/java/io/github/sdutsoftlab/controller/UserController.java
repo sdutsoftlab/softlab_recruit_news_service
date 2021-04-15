@@ -52,7 +52,7 @@ public class UserController {
 
     @GetMapping("query")
     @ResponseBody
-    public ResultKit<Object> loginCheck(@RequestParam("uid") String uid, HttpServletRequest req) {
+    public ResultKit<Object> query(@RequestParam("uid") String uid, HttpServletRequest req) {
         ResultKit<Object> resultKit = new ResultKit<>();
         if (!userService.isOk("结果查询")) {
             resultKit.setMessage("结果尚未公布");

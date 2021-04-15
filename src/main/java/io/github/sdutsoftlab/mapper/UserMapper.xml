@@ -14,4 +14,8 @@
     <select id="isExist" parameterType="string" resultType="string">
         select uid from user where uid=#{uid} limit 1
     </select>
+
+    <select id="fetchAllStudents" resultType="user">
+        select * from user
+    </select>
 </mapper>

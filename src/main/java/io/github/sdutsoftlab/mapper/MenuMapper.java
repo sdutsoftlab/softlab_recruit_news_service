@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MenuMapper {
     int queryOK(String mname);
+
+    int switchMenu(String mname, int status);
 }
